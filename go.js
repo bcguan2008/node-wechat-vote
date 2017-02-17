@@ -5,7 +5,9 @@ var robotFactory = require('./lib/robot');
 //走socks 代理
 var Agent = require('socks5-http-client/lib/Agent');
 
-var joinerId = 929099;
+//var joinerId = 1984944;
+//var joinerId = 2335519;
+var joinerId = 2335615;
 
 function callback(error, response, body) {
   if (!error && response.statusCode == 200) {
@@ -24,8 +26,7 @@ function vote() {
   var ipAddress = robot.ip;
   var url = 'http://wx.m.shangjiadao.cn/api/v1/activity/vote',
       httpMethod = 'POST';
-
-   
+      
   var options = {
     uri: url,
     method: httpMethod,
@@ -44,7 +45,7 @@ function vote() {
         }
         , {
           name: 'Refer',
-          value: 'http://wx.m.shangjiadao.cn/sjd_'+robot.random32+'?activity=17048&joiner=' + joinerId + '&origin=http://wx.m.shangjiadao.cn&type=1&from=timeline&isappinstalled=0',
+          value: 'http://wx.m.shangjiadao.cn/sjd_'+robot.random32+'?activity=28609&joiner=' + joinerId + '&origin=http://wx.m.shangjiadao.cn&type=1&from=timeline&isappinstalled=0',
         }
         , {
           name: 'Accept',
@@ -87,5 +88,7 @@ function voteRandom() {
   count = setInterval(voteRandom, ran);
 }
 
-console.log('vote start');
-voteRandom();
+console.log('=============vote start=============');
+//voteRandom();
+vote()
+
