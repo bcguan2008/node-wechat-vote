@@ -89,6 +89,6 @@ function voteRandom() {
 }
 
 console.log('=============vote start=============');
-//voteRandom();
-vote()
+voteRandom();
+
 
